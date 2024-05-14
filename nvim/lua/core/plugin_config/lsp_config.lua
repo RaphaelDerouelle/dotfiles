@@ -1,5 +1,5 @@
 require("mason-lspconfig").setup({
-  ensure_installed = { "ansiblels", "yamlls" }
+  ensure_installed = { "ansiblels", "yamlls", "lua_ls", "tsserver" }
 })
 
 local lspconfig = require('lspconfig')
@@ -30,6 +30,10 @@ require("lspconfig").lua_ls.setup {
 
 require("lspconfig").ansiblels.setup({})
 require("lspconfig").yamlls.setup({})
+require("lspconfig").tsserver.setup({
+
+})
+
 
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('UserLspConfig', {}),

@@ -1,4 +1,12 @@
-require('telescope').setup({ file_ignore_patterns = { "node%_modules/.*" } })
+require('telescope').setup({ file_ignore_patterns = { "node%_modules/.*" }, 
+extensions = {
+    ["ui-select"] = {
+      require("telescope.themes").get_dropdown {}
+    }
+  }
+})
+require("telescope").load_extension("ui-select")
+
 local builtin = require('telescope.builtin')
 
 vim.keymap.set('n', '<c-p>', builtin.find_files, {})

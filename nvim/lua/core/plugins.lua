@@ -28,7 +28,7 @@ require("lazy").setup({
     run = "cd app && npm install",
   },
   {
-    "nvim-telescope/telescope.nvim", tag = "0.1.4",
-    dependencies = { "nvim-lua/plenary.nvim" , "BurntSushi/ripgrep", "sharkdp/fd"}
+    "nvim-telescope/telescope.nvim", tag = "0.1.6",
+    dependencies = {"nvim-telescope/telescope-ui-select.nvim", "nvim-lua/plenary.nvim" , "BurntSushi/ripgrep", "sharkdp/fd"}
   },
 })
